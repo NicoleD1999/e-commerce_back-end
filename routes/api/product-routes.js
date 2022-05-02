@@ -32,7 +32,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // create new product
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -51,6 +51,7 @@ router.post('/', async (req, res) => {
             tag_id,
           };
         });
+        console.log(productTagIdArr)
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
