@@ -1,9 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home'
+import Navigation from './components/NavBar/Navbar';
+
 
 function App() {
   return (
+  <>
+  <Navigation/>
   <Router>
     <Routes>
     <Route path='/' element={<Home/>}/>
@@ -14,6 +18,7 @@ function App() {
     <Route path = 'shorts' element={<Shorts/>}/> */}
     </Routes>
   </Router>
+  </>
   );
 }
 
