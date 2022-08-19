@@ -13,8 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Shoes', 'Shirts', 'Shorts', 'Music', 'Hats'];
+const settings = ['Profile', 'Cart', 'Favorites', 'Logout'];
 
 const Navigation = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -55,7 +55,7 @@ const Navigation = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            LetShop
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -111,7 +111,7 @@ const Navigation = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            LetShop
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -126,7 +126,7 @@ const Navigation = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Profile">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
