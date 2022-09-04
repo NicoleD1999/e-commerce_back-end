@@ -17,6 +17,9 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
+// get product by category
+
+
 // get one product
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`

@@ -8,19 +8,19 @@ function Shoes(){
     // let history = useHistory()
 
     useEffect(()=>{
-        Axios.get('http://localhost:3001/api/products').then((data)=>{
-            setShoeList(data)
-            console.log(data)
+        Axios.get('http://localhost:3001/api/categories/5').then((data)=>{
+            setShoeList(data.data.products)
         })
     },[])
+    console.log(shoeList)
     
     return (
         <div>
-            {shoeList.map((val, key)=>{
+            {shoeList.map((data, key)=>{
                 return (
                     <div>
                         <h1>
-                            {val}
+                            {data.product_name}
                         </h1>
                     </div>
                 )
